@@ -85,4 +85,12 @@ Examples:
     partition(names, isLongerThanThreeCharacters) // [['Elie', 'Colt', 'Matt'], ['Tim']]
 */
 
-function partition(arr, callback) {}
+function partition(arr, callback) {
+  return arr.reduce(
+    (acc, cur) => {
+      callback(cur) ? acc[0].push(cur) : acc[1].push(cur);
+      return acc;
+    },
+    [[], []]
+  );
+}
