@@ -57,11 +57,10 @@ Examples:
 */
 
 function addKeyAndValue(arr, key, value) {
-  arr[0][key] = value;
   return arr.reduce((acc, cur, idx) => {
-    cur[key] = value;
-    return arr;
-  });
+    acc[idx][key] = value;
+    return acc;
+  }, arr);
 }
 
 /*
