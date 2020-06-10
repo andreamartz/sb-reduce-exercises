@@ -14,7 +14,6 @@ const arr = [
 */
 
 function extractValue(arr, key) {
-  const reducedArr = [];
   return arr.reduce(function (nameArray, next) {
     nameArray.push(next[key]);
     return nameArray;
